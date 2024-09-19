@@ -6,5 +6,7 @@ export const App = () => (
       <img src='/assets/header.png' alt='Header pokemon' />
     </header>
     <PokemonForm />
+
+    
   </div>
 );

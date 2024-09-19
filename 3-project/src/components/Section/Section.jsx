@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { usePokemon } from '../../hooks';
 
 import './Section.styles.css';
@@ -19,6 +20,7 @@ export const Section = ({ selectedPokemonId }) => {
       Pokemon id: {selectedPokemonId}
       Pokemon name: {data.name}
       <img alt={data.name} src={data.sprites.front_default} />
+      <Link to='/edit/:data.name' ></Link>
     </section>
   );
 };

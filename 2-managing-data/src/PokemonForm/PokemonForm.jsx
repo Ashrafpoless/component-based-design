@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
+// import pokemons from '../api/pokemons.js';
 
 import pikaUrl from './pikachu.webp';
 

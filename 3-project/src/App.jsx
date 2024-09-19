@@ -1,27 +1,24 @@
-import { useState } from 'react';
-import { Header, AsideMenu, Footer, Section, Errors } from './components';
-import { usePokemonList } from './hooks';
+
+import { Home, Edit } from './components';
+// import {  Edit } from './components/Edit/Edit';
+
 import { ErrorContextProvider } from './contexts';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 export const App = () => {
-  const [selectId, setSelectId] = useState(null);
-  const { list, isLoading } = usePokemonList();
+ 
 
-  const showSection = selectId || selectId === 0;
+  const Router = createBrowserRouter([
+    {path : '/', element:<Home/>  },
+    {path : '/edit', element:<Edit/>  },
+
+  ])
 
   return (
     <ErrorContextProvider>
-      <Errors />
-      <Header />
-      <main className='main'>
-        {isLoading ? (
-          <p>loading</p>
-        ) : (
-          <AsideMenu list={list} onIdSelected={(id) => setSelectId(id)} />
-        )}
-        {showSection && <Section selectedPokemonId={selectId} />}
-      </main>
-      <Footer />
+      <RouterProvider router={Router}>
+
+      </RouterProvider>
     </ErrorContextProvider>
   );
 };

@@ -1,0 +1,84 @@
+ul li{
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 2.3rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.container button{
+    position: relative;
+    background: orangered;
+    border: none;
+    color: white;
+    padding: 15px 24px;
+    font-size: 1.4rem;
+    box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+    outline: none;
+}
+
+.container button:hover{
+    background: hsl(16, 100%, 45%);
+}
+
+.container button:active{
+    background: hsl(16, 100%, 40%);
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 hsl(16, 100%, 30%);
+}
+
+
+
+
+.container button:active::before{
+    border: solid 3px transparent;
+    border-right: solid 3px hsl(16, 100%, 30%);
+    border-left-width: 0px;
+    left: -3px;
+}
+
+.container button:active::after{
+    border: solid 3px transparent;
+    border-top: solid 3px hsl(16, 100%, 30%);
+    border-bottom-width: 0px;
+    bottom: -3px;
+}
+
+
+.list{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.pokemon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    
+}
+
+.pokemon img{
+    width: 300px;
+    height: 300px;
+    
+}
+
+.pokemon h3{
+    margin: 10px;
+   font-size: 1.4rem;
+   font-family: monospace;
+}

@@ -1,4 +1,25 @@
 main {
-  flex: 1;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
 }
+
+
+
+h1{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

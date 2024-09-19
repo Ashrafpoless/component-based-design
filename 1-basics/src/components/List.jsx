@@ -1,19 +1,21 @@
 import { Button } from './Button';
+import './List.css';
+import ListItem from './ListItem';
 
-const list = ['Pikachu', 'Bulbazaur', 'Charmander', 'Squirtle']
+const list = ['Pikachu', 'Bulbazaur', 'Charmander', 'Squirtle', 'charizard', 'Caterpie', 'Rattata', 'Magneton', 'Dewgong']
 
 export const List = () => (
-  <div>
-    <ul>
-      {list.map((listItem) => (
-        <li key={listItem}>{listItem}</li>
-      ))}
-    </ul>
-    <ul>
-      <li>{list[0]}</li>
-      <li>{list[1]}</li>
-      <li>{list[2]}</li>
-    </ul>
-    <Button>Do it!</Button>
+  <div className='container'>
+    <div className='list'>
+      
+        {list.map((listItem) => (
+          // <li key={listItem}>{listItem}</li>
+          <div className='pokemon'>
+            <ListItem key={listItem} text={listItem}/>
+          </div>
+        ))}
+    </div>
+    
+    <Button text=' Do it'/>
   </div>
 );
